@@ -1,70 +1,3 @@
-:root {
-    --radius: 8px;
-    --gradient: linear-gradient(to bottom right, #202020, #73628A);
-    --spaceUp: 5vh 0 0 0;
-}
-
-body {
-    background-color: #151515;
-    padding: 1vh 3vh;
-}
-
-h1, h2, h3, h4, h5, h6 {
-    color: #DCEDFF;
-    font-family: 'Saira';
-}
-
-p {
-    color: #DCEDFF;
-    font-family: 'Arimo';
-    font-size: 1.25rem;
-}
-
-header, section {
-    border-radius: var(--radius);
-}
-
-.nav-header {
-    padding: 0 3vh;
-    position: sticky;
-    z-index: 999;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    background: var(--gradient);
-}
-
-.nav-header a {
-    color: #DCEDFF;
-    font-size: 1.25rem;
-    font-family: 'Saira';
-    margin: 0 15px;
-    font-weight: 600;
-}
-
-a {
-    text-decoration: none;
-}
-
-.nav-button {
-    background-color: #8b76a7;
-    border-radius: var(--radius);
-    animation: nav-btn-anim 5s ease-in-out infinite;
-}
-
-@keyframes nav-btn-anim {
-    0%, 70% {
-        background-color: #8b76a7;
-        transform: scale(1);
-    }
-
-    85% {
-        background-color: #937eaf;
-        transform: scale(1.1);
-    }
-}
-
 .sect1 {
     display: flex;
     margin: var(--spaceUp);
@@ -93,7 +26,7 @@ a {
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    background-image: url('photo/web-dev.png');
+    background-image: url('../photo/web-dev.png');
     background-size: cover;
     background-position: center;
     border-radius: var(--radius);
@@ -207,6 +140,10 @@ a {
     border-radius: var(--radius);
 }
 
+.why-left button:active {
+    transform: translateY(5%);
+}
+
 .why-right {
     flex: 2;
     background: var(--gradient);
@@ -215,36 +152,32 @@ a {
 }
 
 @media (max-width: 768px) {
-    .sect1 {
+
+    .sect1-left h1 {
+        font-size: 1.6rem;
+    }
+
+    .sect1-left {
+        padding: 1vh 2vh;
+    }
+
+    .sect1-right {
+        height: 40vh;
+    }
+
+    .sect1, .whyus{
         flex-direction: column;
         height: auto;
     }
 
+    .whyus {
+        gap: 3vh;
+    }
+
     .partners {
         flex-wrap: wrap;
-        padding: 4vh 2vh;
+        padding: 2vh 2vh;
         gap: 15px;
-    }
-
-    .logo * {
-        height: 50px;
-        width: 50px;
-    }
-
-    .logo1 {
-        display: none;
-    }
-
-    .navigation {
-        display: none;
-    }
-
-    .nav-header {
-        justify-content: space-around;
-    }
-
-    boddy {
-        padding: 10px;
     }
 
     .arrows * {
@@ -255,5 +188,9 @@ a {
 
     .course-btns * {
         padding: 5px 10px;
+    }
+
+    .logo1 {
+        display: none;
     }
 }

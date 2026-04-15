@@ -1,0 +1,48 @@
+.info-container {
+    max-width: 900px;
+    margin: 5vh auto;
+    padding: 0 20px;
+}
+
+.info-hero {
+    text-align: center;
+    margin-bottom: 6vh;
+    padding: 40px;
+    background: var(--gradient);
+    border-radius: var(--radius);
+}
+
+.info-section {
+    margin-bottom: 40px;
+    line-height: 1.6;
+}
+
+.info-section h2 {
+    margin-bottom: 15px;
+    border-left: 4px solid #73628A;
+    padding-left: 15px;
+}
+
+.info-section h3 {
+    margin: 20px 0 10px 0;
+    color: #8b76a7;
+}
+
+.info-section ul {
+    margin: 15px 0;
+    padding-left: 20px;
+    color: #DCEDFF;
+    font-family: 'Arimo';
+}
+
+@media (max-width: 768px) {
+    .info-container {
+        margin: 2vh auto;
+    }
+    .info-hero h1 {
+        font-size: 1.8rem;
+    }
+    .info-section p {
+        font-size: 1.1rem;
+    }
+}
